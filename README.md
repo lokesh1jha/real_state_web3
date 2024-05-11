@@ -1,34 +1,61 @@
-# real_state_web3
-A real state webapp which allows to buy properties using ETH
+# Real State Web3
+
+This repository contains a real estate web application that enables users to purchase properties using Ethereum (ETH) cryptocurrency.
+
+## Installation
+
+To install the necessary dependencies, run the following command:
 
 ```
-npm i
+npm install
+```
+
+## Testing
+
+To run tests, use the following command:
 
 ```
-npm hardhat test
+npm run hardhat test
+```
+
+## Local Development Node
+
+To run a local development node with multiple wallets each having 100 ETH and to view all logs from smart contract actions, use the following command:
 
 ```
-npm hardhat node
+npm run hardhat node
+```
 
-This will host several (20) wallet with 100ETH and all logs from the smart contract action will be here in this terminal
+This command will host several wallets with 100 ETH each, and all logs from smart contract actions will be displayed in the terminal.
 
-New Terminal:
-``` 
+## Deployment
+
+To deploy the contracts, execute the deployment script with the following command:
+
+```
 npx hardhat run scripts/deploy.js --network localhost
+```
 
-You will get console of 
-"
-Deployed Real Estate Contract at: 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+Upon successful deployment, the console will display:
+
+```
+Deployed Real Estate Contract at: [RealEstateContractAddress]
 Minting 3 properties...
 
-Deployed Escrow Contract at: 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
+Deployed Escrow Contract at: [EscrowContractAddress]
 Listing 3 properties...
 
 Finished.
-"
+```
 
-This address will be pasted in config.json for UI reference
+The addresses will be pasted in the `config.json` file for reference in the user interface (UI).
 
-Then in new Terminal: UI
+## User Interface (UI)
+
+To start the UI, use the following command:
+
 ```
 npm run start
+```
+
+This will initiate the user interface for the real estate web application.
